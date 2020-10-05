@@ -15,7 +15,7 @@ public final class WordSplit {
       if (inputWord.startsWith(firstWord) &&
           isValid(Arrays.asList(firstWord, secondWord), dictionary)
       ) {
-        result = String.join(",", firstWord, secondWord);
+        result = assemble(firstWord, secondWord);
       }
     }
 
@@ -24,5 +24,9 @@ public final class WordSplit {
 
   private static boolean isValid(List<String> containWords, String[] dictionary) {
     return Arrays.asList(dictionary).containsAll(containWords);
+  }
+
+  private static String assemble(String first, String second) {
+    return String.join(",", first, second);
   }
 }

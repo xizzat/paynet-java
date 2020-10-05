@@ -1,5 +1,6 @@
 package com.paynet.demo;
 
+import com.paynet.demo.util.RunLength;
 import com.paynet.demo.util.WordSplit;
 
 import org.springframework.boot.SpringApplication;
@@ -13,7 +14,10 @@ public class DemoApplication {
 
     String[] input = new String[]{"ballbase", "a,all,b,ball,bas,base,cat,code,d,e,quit,z"};
     //String[] input = new String[]{"abcgefd", "a,ab,abc,abcg,b,c,dog,e,efd,zzzz"};
-    String output = WordSplit.wordSplit(input);
+    String output = WordSplit.execute(input);
     System.out.println(output);
+
+    System.out.println(RunLength.execute("aabbcde"));
+    System.out.println(RunLength.execute("wwwbbbw"));
   }
 }
