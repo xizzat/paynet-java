@@ -1,6 +1,12 @@
 # paynet-java
 App to demonstrate function wordsplit and runlength
 
+## To run
+```
+cd paynet-java/demo
+./gradlew bootRun
+```
+
 ## Utils
 ### 1. WordsSplit
 This utility is to determine if the first element in the input can be split into two words, where both words exist in the dictionary that is provided in the second input
