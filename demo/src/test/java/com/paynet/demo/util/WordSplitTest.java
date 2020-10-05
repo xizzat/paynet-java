@@ -13,36 +13,36 @@ public class WordSplitTest {
   @Test
   public void wordSplit_helloCat() {
     String[] input = new String[]{"catyellow", "apple,bat,cat,goodbye,hello,yellow,why"};
-    assertEquals(expected, WordSplit.wordSplit(input));
+    assertEquals(expected, WordSplit.execute(input));
   }
 
   @Test
   public void wordSplit_withSpacing() {
     String[] input = new String[]{"catyellow", "apple,bat, cat,goodbye ,hello, yellow  ,why"};
-    assertEquals(expected, WordSplit.wordSplit(input));
+    assertEquals(expected, WordSplit.execute(input));
   }
 
   @Test
   public void wordSplit_reverse() {
     String[] input = new String[]{"yellowcat", "apple,bat,cat,goodbye,hello,yellow,why"};
-    assertEquals(expectedReverse, WordSplit.wordSplit(input));
+    assertEquals(expectedReverse, WordSplit.execute(input));
   }
 
   @Test
   public void wordSplit_notExist() {
     String[] input = new String[]{"ballyellow", "apple,bat, cat,goodbye ,hello, yellow  ,why"};
-    assertEquals(not_possible, WordSplit.wordSplit(input));
+    assertEquals(not_possible, WordSplit.execute(input));
   }
 
   @Test
   public void wordSplit_3words() {
     String[] input = new String[]{"catyellowcat", "apple,bat, cat,goodbye ,hello, yellow  ,why"};
-    assertEquals(not_possible, WordSplit.wordSplit(input));
+    assertEquals(not_possible, WordSplit.execute(input));
   }
 
   @Test
   public void wordSplit_empty() {
     String[] input = new String[]{"", "apple,bat, cat,goodbye ,hello, yellow  ,why"};
-    assertEquals(not_possible, WordSplit.wordSplit(input));
+    assertEquals(not_possible, WordSplit.execute(input));
   }
 }

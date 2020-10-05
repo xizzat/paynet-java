@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public final class WordSplit {
-  public static String wordSplit(String[] strArray) {
+  public static String execute(String[] strArray) {
     String inputWord = strArray[0];
     String[] dictionary = strArray[1].split("\\s*,\\s*"); //add regex to allowed white spacing
 
